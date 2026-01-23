@@ -1,1 +1,208 @@
 
+What are Conditional Statements? 
+Conditional statements help a program take decisions.
+
+ “If this happens, do that. Otherwise, do something else.”
+
+Just like how we decide things daily, Java programs decide using conditions.
+// if Statement
+When to use:
+When only one condition needs to be checked.
+
+Syntax:
+if (condition) {
+    // code to execute
+}
+Real-life example:
+ If it is raining, take an umbrella.
+
+boolean isRaining = true;
+
+if (isRaining) {
+    System.out.println("Take an umbrella");
+}
+Unique use case:
+ Mobile App Notification
+
+If battery < 20%, show warning.
+
+int battery = 15;
+
+if (battery < 20) {
+    System.out.println("Low Battery Warning!");
+}
+//if-else Statement
+When to use:
+When there are two possible outcomes.
+
+Syntax:
+if (condition) {
+    // true block
+} else {
+    // false block
+}
+Real-life example:
+🎓 If marks ≥ 35 → Pass, else → Fail
+
+int marks = 72;
+
+if (marks >= 35) {
+    System.out.println("You passed!");
+} else {
+    System.out.println("You failed!");
+}
+Unique use case:
+ ATM Transaction
+
+If balance is sufficient → Withdraw
+
+Else → Insufficient balance
+
+int balance = 3000;
+int withdraw = 5000;
+
+if (balance >= withdraw) {
+    System.out.println("Withdrawal successful");
+} else {
+    System.out.println("Insufficient balance");
+}
+// else-if Ladder
+When to use:
+When multiple conditions must be checked one by one.
+
+Syntax:
+if (condition1) {
+    // code
+} else if (condition2) {
+    // code
+} else {
+    // default code
+}
+Real-life example:
+ Grade System
+
+int score = 82;
+
+if (score >= 90) {
+    System.out.println("Grade A");
+} else if (score >= 75) {
+    System.out.println("Grade B");
+} else if (score >= 60) {
+    System.out.println("Grade C");
+} else {
+    System.out.println("Fail");
+}
+Unique use case:
+Traffic Signal System
+
+String signal = "Yellow";
+
+if (signal.equals("Red")) {
+    System.out.println("Stop");
+} else if (signal.equals("Yellow")) {
+    System.out.println("Get Ready");
+} else if (signal.equals("Green")) {
+    System.out.println("Go");
+}
+//Nested if (if inside if)
+When to use:
+When a condition depends on another condition.
+
+Syntax:
+if (condition1) {
+    if (condition2) {
+        // code
+    }
+}
+Real-life example:
+ If student is present → check if homework is done
+
+boolean isPresent = true;
+boolean homeworkDone = false;
+
+if (isPresent) {
+    if (homeworkDone) {
+        System.out.println("Good student");
+    } else {
+        System.out.println("Homework pending");
+    }
+}
+Unique use case:
+Login System
+
+boolean isLoggedIn = true;
+boolean isAdmin = false;
+
+if (isLoggedIn) {
+    if (isAdmin) {
+        System.out.println("Admin Dashboard");
+    } else {
+        System.out.println("User Dashboard");
+    }
+}
+//switch Statement
+When to use:
+When you have fixed options (menu, choices, days, roles).
+
+Syntax:
+switch (variable) {
+    case value1:
+        break;
+    case value2:
+        break;
+    default:
+}
+Real-life example:
+Day of the Week
+
+int day = 3;
+
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+    case 2:
+        System.out.println("Tuesday");
+        break;
+    case 3:
+        System.out.println("Wednesday");
+        break;
+    default:
+        System.out.println("Invalid day");
+}
+Unique use case:
+Game Character Selection
+
+String character = "Mage";
+
+switch (character) {
+    case "Warrior":
+        System.out.println("High strength");
+        break;
+    case "Mage":
+        System.out.println("High magic power");
+        break;
+    case "Archer":
+        System.out.println("Long-range attacks");
+        break;
+}
+ Quick Comparison
+Statement	Use When
+if	One condition
+if-else	Two outcomes
+else-if	Multiple conditions
+Nested if	Condition depends on another
+switch	Fixed values / menu-based
+Real-World Applications Summary
+Banking apps → balance checks
+
+E-commerce → discount eligibility
+
+Android apps → permission checks
+
+Games → character & level logic
+
+Security systems → authentication rules
+
+
+
